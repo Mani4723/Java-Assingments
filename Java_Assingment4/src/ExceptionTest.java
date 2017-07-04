@@ -4,16 +4,13 @@
 import java.lang.*;
 
 class Exception1 extends Exception {
-    public Exception1() {}
-    public Exception1(String s1) {super(s1);}
+    Exception1(String s1) {super(s1);}
 }
 class Exception2 extends Exception {
-    public Exception2() {}
-    public Exception2(String s2) {super(s2);}
+    Exception2(String s2) {super(s2);}
 }
 class Exception3 extends Exception {
-    public Exception3() {}
-    public Exception3(String s3) {super(s3);}
+    Exception3(String s3) {super(s3);}
 }
 public class ExceptionTest {
     static Integer x; /* By default it will initialize to null. To catch NullPointerException in finally block, */
