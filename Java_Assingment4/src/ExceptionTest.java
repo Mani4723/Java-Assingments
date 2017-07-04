@@ -30,5 +30,4 @@ public class ExceptionTest {
                     System.out.println("Finally block always executes even if nullpoint exception is thrown.");
               }
     }
-
 }
