@@ -4,13 +4,13 @@
 import java.lang.*;
 
 class Exception1 extends Exception {
-    Exception1(String s1) {super(s1);}
+    Exception1(String s1) {}
 }
 class Exception2 extends Exception {
-    Exception2(String s2) {super(s2);}
+    Exception2(String s2) {}
 }
 class Exception3 extends Exception {
-    Exception3(String s3) {super(s3);}
+    Exception3(String s3) {}
 }
 public class ExceptionTest {
     static Integer x; /* By default it will initialize to null. To catch NullPointerException in finally block, */
@@ -30,5 +30,4 @@ public class ExceptionTest {
                     System.out.println("Finally block always executes even if nullpoint exception is thrown.");
               }
     }
-
 }
