@@ -13,19 +13,22 @@ class Exception3 extends Exception {
     Exception3(String s3) {}
 }
 public class ExceptionTest {
-    static Integer x; /* By default it will initialize to null. To catch NullPointerException in finally block, */
-    //static Integer x = 10;  /*  If we initialize it to any value then it will catch at one of the exceptions.*/
-    public static void Method(int i) throws Exception1, Exception2, Exception3 {
-        if(i > x) throw new Exception1("Exception 1");
-        if(i < x) throw new Exception2("Exception 2");
-        if(i == x) throw new Exception3(" Exception 3");
+    static Integer [] x = new Interger[1]; // dynamic array will be initialized during runtime.
+    public static void Method(int x) throws Exception1, Exception2, Exception3 {
+        if(x > 0) throw new Exception1("Exception 1");
+        if(x < 0) throw new Exception2("Exception 2");
+        if(x == 0) throw new Exception3(" Exception 3");
     }
     public static void main(String[] args) {
         try {
-            Method(10);
-
+            Method(x[0]); // catches nullpoint exceptions.
+            Method(11);  // catches exception 1.
+            Method(-9); // catches exception 2.
+            Method(0); // Catches exception 3.
+             
         } catch (Exception e) { /* Only single catch block to catch all types of exception. */
             System.out.println("Caught"+e);
+            e.printStackTrace(System.out); 
             } finally {
                     System.out.println("Finally block always executes even if nullpoint exception is thrown.");
               }
