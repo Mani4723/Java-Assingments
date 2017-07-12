@@ -14,8 +14,9 @@ public class FilePath
             String directory = "/home/";  // Directory name, where we want to search the files.
             fp.findFile(filename, new File(directory));
             System.out.println();
-            System.out.println("Enter the file name to search the path or exit by typing 'exit' : ");
+            System.out.println("Enter the file name to search the path or exit by typing 'exit' : ");  
         }
+            scan.close();
     }
 
     public void findFile(String filename,File dir) {
